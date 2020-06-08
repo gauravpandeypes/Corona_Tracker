@@ -1,0 +1,33 @@
+table,th,td{
+  border: 1px solid black
+}
+
+tbody>tr>:nth-child(1){
+    background-color: rgba(0,200,0,0.1);
+    /* font-family: monospace; */
+    font-weight: bold;
+}
+
+#total{
+    background-color: rgba(0,200,0,0.3);
+    color: rgba(200,0,0,0.7);
+    font-family: 'Comic Sans MS';
+}
+
+#world_table_length, #world_table_filter{
+  color: rgba(200,0,0,0.7);
+}
+
+input, select{
+  background-color: rgba(0,200,0,0.3);
+}
+#header {
+  font-size: 6rem;
+  color: rgba(50,50,50,0.5);
+  /* padding-top:25px; */
+}
+
+#header_page{
+  padding-top:25px;
+  margin-top:25px;
+}

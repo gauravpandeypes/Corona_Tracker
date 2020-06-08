@@ -1,0 +1,32 @@
+.row{
+    padding-bottom: 50px;
+}
+
+#countryname{
+    font-size: 8rem;
+    color: rgba(50,50,50,0.5);
+    padding-top:25px;
+}
+
+#header{
+    font-size : 1.5rem;
+}
+
+#total_cases{
+    color: rgba(0,0,200,0.5);
+}
+
+#total_deaths{
+    color: rgba(200,0,0,0.5);
+}
+
+#total_recovered{
+    color: rgba(0,200,0,0.5);
+}
+
+#total_cases, #total_deaths, #total_recovered{
+    padding-top: 25px;
+    font-size: 3rem;
+    font-family: monospace;
+    font-weight: bold;
+}

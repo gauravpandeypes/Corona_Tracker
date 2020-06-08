@@ -1,0 +1,74 @@
+
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Corona Stats</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'covid/css/indianStates.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    <div class='container'>
+      <nav aria-label="breadcrumb">
+        <ol id='header_page'class="breadcrumb pt-4 mt-3">
+          <li class="breadcrumb-item"><a href="{% url 'covid_index' %}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{countryName}}</li>
+        </ol>
+      </nav>
+    </div>
+    <div id='table' class='container table-responsive text-center'>
+      <table id='indianStatesTable' class="table table-hover table-striped table-bordered">
+
+        <caption>Last Updated On : {{date}}</caption>
+        <div class='text-center'>
+          <div id='header'>India - Statewise</div>
+          <thead>
+            <tr id='heading' class='bg-info'>
+              <td >STATE</td>
+              <td>CONFIRMED</td>
+              <td>DEATHS</td>
+              <td>RECOVERED</td>
+              <td>ACTIVE</td>
+            </tr>
+          </thead>
+        </div>
+        <tbody>
+          {% for state in states %}
+            <tr>
+              <td>{{ state.state }}</td>
+              <td>{{ state.confirmed }}</td>
+              <td>{{ state.deaths }}</td>
+              <td>{{ state.recovered }}</td>
+              <td>{{ state.active }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+        <!-- <tbody> -->
+          <tr id='total' class='bg-success text-white'>
+            <td>{{ total.state }}</td>
+            <td>{{ total.confirmed }}</td>
+            <td>{{ total.active }}</td>
+            <td>{{ total.deaths }}</td>
+            <td>{{ total.recovered }}</td>
+          </tr>
+        <!-- </tbody> -->
+      </table>
+
+
+    </div>
+    <div class='row'>
+      <a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN"
+          target="_blank">
+        <img src="{% static 'covid/aarogyasetu.jpg' %}" width="100%">
+      </a>
+    </div>
+    <!-- <p>{{states}}</p> -->
+    <script src="{% static 'covid/js/indianStates.js' %}"></script>
+  </body>
+</html>
