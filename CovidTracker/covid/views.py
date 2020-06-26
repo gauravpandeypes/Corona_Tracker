@@ -71,6 +71,7 @@ def index(request):
     res = res.json()
     world = res['Global']
     countries = res['Countries']
+
     apiDate = countries[0]['Date'].split("T")[0]
     print(apiDate)
 
@@ -108,6 +109,7 @@ def addData(country,code,population,covidall):
     return temp
 
 def createCountryStatus(request):
+    print('Database creation Started')
     CovidAll.objects.all().delete()
     res = requests.get("https://corona-api.com/countries")
     res = res.json()
@@ -131,6 +133,7 @@ def createCountryStatus(request):
         #         for covidall in covidallData:
         #             covidData = addData(co['name'],co['code'],co['population'],covidall)
         #             covidData.save()
+    print('Database Creation successful')
     return redirect("covid_index")
 
 def otherCountry(request,code):
