@@ -3,7 +3,7 @@
 #### Website URL : https://trackcorona.pythonanywhere.com/
 
 #### Frontend - html, css, javascript, bootstrap, chartjs, data table   
-<h6>Soon to be changed to   REACT.JS   as frontend</h6>   
+##### Soon to be changed to   REACT.JS   as frontend
 ### Backend - Django
 
 => Uses two seperate apis to show the most recent data
