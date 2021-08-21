@@ -1,9 +1,8 @@
 # Corona_Tracker
 ### Website to keep track of corona cases.
-#### Website URL : https://trackcorona.pythonanywhere.com/
 
-#### Frontend - html, css, javascript, bootstrap, chartjs, data table   
-##### Soon to be changed to   REACT.JS   as frontend
+### Frontend
+#### Html, Css, Javascript, Bootstrap, Chartjs, Data table
 ### Backend - Django
 
 => Uses two seperate apis to show the most recent data
