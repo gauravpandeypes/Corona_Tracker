@@ -9,7 +9,7 @@ djangorestframework==3.11.0
 filelock==3.0.12
 get==2019.4.13
 idna==2.9
-pipenv==2018.11.26
+pipenv==2022.1.8
 post==2019.4.13
 public==2019.4.13
 pytz==2019.3
